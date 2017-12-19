@@ -8,9 +8,19 @@ class Welcome extends React.Component {
     }
 }
 
-const element = <Welcome name="Mauricio" />;
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <Welcome name="Mauricio" />
+                <Welcome name="Nicole" />
+                <Welcome name="Darlyn" />
+            </div>
+        );
+    }
+}
 
 ReactDOM.render(
-    element,
+    <App />,
     document.getElementById('root')
 );
