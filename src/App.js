@@ -3,6 +3,7 @@ import Clock from './components/Clock';
 import Toggle from './components/Toggle';
 import LoginControl from './components/LoginControl';
 import Mailbox from './components/Mailbox';
+import Page from './components/Page';
 
 const messages = ['React', 'Re: React', 'Re:Re: React', 'Re:Re:Re: React'];
 
@@ -16,6 +17,7 @@ export default class App extends React.Component {
                 <Toggle />
                 <LoginControl />
                 <Mailbox unreadMessages={messages} />
+                <Page />
             </div>
         );
     }
