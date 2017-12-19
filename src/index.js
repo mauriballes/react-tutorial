@@ -8,6 +8,12 @@ class Welcome extends React.Component {
     }
 }
 
+class FormattedDate extends React.Component {
+    render() {
+        return <h2>It is {this.props.date.toLocaleTimeString()}.</h2>;
+    }
+}
+
 class Clock extends React.Component {
     constructor(props) {
         super(props);
@@ -31,16 +37,26 @@ class Clock extends React.Component {
     render() {
         return (
             <div>
-                <Welcome name="Mauricio" />
-                <Welcome name="Nicole" />
-                <Welcome name="Darlyn" />
-                <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+                <Welcome name={this.props.name} />
+                <FormattedDate date={this.state.date} />
+            </div>
+        );
+    }
+}
+
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <Clock name="Mauricio" />
+                <Clock name="Nicole" />
+                <Clock name="Darlyn" />
             </div>
         );
     }
 }
 
 ReactDOM.render(
-    <Clock />,
+    <App />,
     document.getElementById('root')
 );
