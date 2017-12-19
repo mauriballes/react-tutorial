@@ -24,7 +24,7 @@ class UserInfo extends React.Component {
     }
 }
 
-export class Comment extends React.Component {
+export default class Comment extends React.Component {
     render() {
         return (
             <div className="Comment">
