@@ -8,19 +8,24 @@ class Welcome extends React.Component {
     }
 }
 
-class App extends React.Component {
+class Clock extends React.Component {
     render() {
         return (
             <div>
                 <Welcome name="Mauricio" />
                 <Welcome name="Nicole" />
                 <Welcome name="Darlyn" />
+                <h2>It is {this.props.date.toLocaleTimeString()}.</h2>
             </div>
         );
     }
 }
 
-ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-);
+function tick() {
+    ReactDOM.render(
+        <Clock date={new Date()} />,
+        document.getElementById('root')
+    );
+}
+
+setInterval(tick, 1000);
