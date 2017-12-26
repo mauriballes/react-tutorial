@@ -3,6 +3,7 @@ import React from 'react';
 class WarningBanner extends React.Component {
     render() {
         if (!this.props.warn) {
+            // Return null for not render an component
             return null;
         }
 

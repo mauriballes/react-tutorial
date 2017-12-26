@@ -16,6 +16,7 @@ class LogoutButton extends React.Component {
 export default class LoginControl extends React.Component {
     constructor(props) {
         super(props);
+        // Bind for using `this`
         this.handleLoginClick = this.handleLoginClick.bind(this);
         this.handleLogoutClick = this.handleLogoutClick.bind(this);
         this.state = { isLoggedIn: false };
@@ -35,6 +36,7 @@ export default class LoginControl extends React.Component {
         return (
             <div>
                 <Greeting isLoggedIn={isLoggedIn} />
+                {/* Conditionals */}
                 {isLoggedIn ?
                     <LogoutButton onClick={this.handleLogoutClick} />
                     :

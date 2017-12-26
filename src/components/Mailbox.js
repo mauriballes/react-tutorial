@@ -6,6 +6,7 @@ export default class Mailbox extends React.Component {
         return (
             <div>
                 <h1>Hello!</h1>
+                {/* Conditionals */}
                 {unreadMessages.length > 0 &&
                     <h2>
                         You have {unreadMessages.length} unread messages.

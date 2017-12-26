@@ -15,6 +15,7 @@ class GuestGreeting extends React.Component {
 export default class Greeting extends React.Component {
     render() {
         const isLoggedIn = this.props.isLoggedIn;
+        // Conditionals
         if (isLoggedIn) {
             return <UserGreeting />;
         }
