@@ -11,9 +11,12 @@ export default class NumberList extends React.Component {
         const numbers = this.props.numbers;
         // Keys are important for React for detect changes 
         // when you use lists or arrays
-        const listItems = numbers.map(number =>
-            <ListItem key={number.toString()} value={number} />
+        return (
+            <ul>
+                {numbers.map(number =>
+                    <ListItem key={number.toString()} value={number} />
+                )}
+            </ul>
         );
-        return <ul>{listItems}</ul>;
     }
 }
